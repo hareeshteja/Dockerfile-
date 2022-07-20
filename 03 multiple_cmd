@@ -1,0 +1,17 @@
+# Example 3 - base image 
+
+FROM ubuntu:latest
+
+# Command - overwritten
+# can only be run into -it mode
+ENTRYPOINT ["/bin/echo","Hello World 1"]
+
+CMD ["/bin/echo","Hello World 2"]
+CMD ["/bin/echo","Hello World 3"] 
+CMD ["/bin/echo","Hello World 4"]
+CMD ["/bin/echo","Hello World 5"]
+
+CMD ["/bin/echo","Hello World 6"]
+
+# only one (last) instance of entrypoint/cmd would be considered
+
